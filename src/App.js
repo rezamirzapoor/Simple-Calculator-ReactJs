@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import './bootstrap.min.css';
+import Button from './Component/Button';
+export default class App extends Component {
+  handleClick = (ev) => { }
+  render = () =>
+    <React.Fragment>
+      <div className="row">
+        <div className="col-1 col-md-3 col-lg-4"></div>
+        <div className="col-10 col-md-6 col-lg-4">
+          
+          <div className="row">
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Button value={'X^2'} className="number btn-primary" onClick={this.handleClick} />
+            <Button value={'Square'} className="number btn-primary" onClick={this.handleClick} />
+            <Button value={'<--'} className="number btn-primary" onClick={this.handleClick} />
+            <Button value={'/'} className="operator btn-danger" onClick={this.handleClick} />
+
+            <Button value={8} className="number btn-info" onClick={this.handleClick} />
+            <Button value={7} className="number btn-info" onClick={this.handleClick} />
+            <Button value={9} className="number btn-info" onClick={this.handleClick} />
+            <Button value={'*'} className="operator btn-danger" onClick={this.handleClick} />
+
+            <Button value={4} className="number btn-info" onClick={this.handleClick} />
+            <Button value={5} className="number btn-info" onClick={this.handleClick} />
+            <Button value={6} className="number btn-info" onClick={this.handleClick} />
+            <Button value={'-'} className="operator btn-danger" onClick={this.handleClick} />
+
+            <Button value={1} className="number btn-info" onClick={this.handleClick} />
+            <Button value={2} className="number btn-info" onClick={this.handleClick} />
+            <Button value={3} className="number btn-info" onClick={this.handleClick} />
+            <Button value={'+'} className="operator btn-danger" onClick={this.handleClick} />
+
+            <Button value={'C'} className="number btn-primary" onClick={this.handleClick} />
+            <Button value={0} className="number btn-info" onClick={this.handleClick} />
+            <Button value={'.'} className="number btn-primary" onClick={this.handleClick} />
+            <Button value={'='} className="operator btn-danger" onClick={this.handleClick} />
+          </div>
+        </div>
+        <div className="col-1 col-md-3 col-lg-4"></div>
+      </div>
+    </React.Fragment>
 }
-
-export default App;

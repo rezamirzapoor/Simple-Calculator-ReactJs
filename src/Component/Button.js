@@ -3,9 +3,9 @@ export default class Button extends Component {
     render = () =>
         <React.Fragment>
             <div className="col-3">
-                <input kind={this.props.kind}
+                <input
                     value={this.props.value}
-                    className={"btn btn-block " + this.props.className}
+                    className={"key btn btn-block " + this.props.className}
                     onClick={this.props.onClick}
                     type="button"
                 />
