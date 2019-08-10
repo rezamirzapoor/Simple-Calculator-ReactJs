@@ -10,7 +10,7 @@ export default class App extends Component {
     }
   }
   handleClick = (ev) => { this.setState({ stringValue: this.state.stringValue + ev.target.value }) }
-  
+  calculateValue = () => { this.setState({ stringValue: eval(this.state.stringValue) }) }
   render = () =>
     <React.Fragment>
       <div className="row">
@@ -44,7 +44,7 @@ export default class App extends Component {
             <Button value={'C'} className="number btn-primary" onClick={this.handleClick} />
             <Button value={0} className="number btn-info" onClick={this.handleClick} />
             <Button value={'.'} className="number btn-primary" onClick={this.handleClick} />
-            <Button value={'='} className="operator btn-danger" onClick={this.handleClick} />
+            <Button value={'='} className="operator btn-danger" onClick={this.calculateValue} />
           </div>
         </div>
         <div className="col-1 col-md-3 col-lg-4"></div>
