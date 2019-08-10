@@ -3,13 +3,22 @@ import './App.css';
 import './bootstrap.min.css';
 import Button from './Component/Button';
 export default class App extends Component {
-  handleClick = (ev) => { }
+  constructor(props) {
+    super(props);
+    this.state = {
+      stringValue: ""
+    }
+  }
+  handleClick = (ev) => { this.setState({ stringValue: this.state.stringValue + ev.target.value }) }
+  
   render = () =>
     <React.Fragment>
       <div className="row">
         <div className="col-1 col-md-3 col-lg-4"></div>
         <div className="col-10 col-md-6 col-lg-4">
-          
+          <div id="output-view">
+            <span>{this.state.stringValue}</span>
+          </div>
           <div className="row">
 
             <Button value={'X^2'} className="number btn-primary" onClick={this.handleClick} />
