@@ -9,9 +9,16 @@ export default class App extends Component {
       stringValue: "0"
     }
   }
-  handleClick = (ev) => { this.setState({ stringValue: this.state.stringValue + ev.target.value }) }
+  handleClick = (ev) => {
+    this.setState({
+      stringValue: this.state.stringValue !== "0" ?
+        this.state.stringValue + ev.target.value
+        :
+        this.state.stringValue = ev.target.value
+    })
+  }
   calculateValue = () => { this.setState({ stringValue: eval(this.state.stringValue) }) }
-  clearValue = () => {this.setState({stringValue: "0"})}
+  clearValue = () => { this.setState({ stringValue: "0" }) }
   render = () =>
     <React.Fragment>
       <div className="row">
