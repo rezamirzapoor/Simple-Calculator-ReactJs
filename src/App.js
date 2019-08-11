@@ -35,7 +35,7 @@ export default class App extends Component {
       :
       this.setState({ error: true })
   }
-  clearValue = () => { this.setState({ stringValue: "0" }) }
+  clearValue = () => { this.setState({ stringValue: "0", error: false }) }
   render = () =>
     <React.Fragment>
       <div className="row">
@@ -43,6 +43,9 @@ export default class App extends Component {
         <div className="col-10 col-md-6 col-lg-4">
           <div id="output-view">
             <span>{this.state.stringValue}</span>
+          </div>
+          <div id="error">
+            <span className="text-danger">{this.state.error ? ("Please Enter Invalid Button") : ("")}</span>
           </div>
           <div className="row">
 

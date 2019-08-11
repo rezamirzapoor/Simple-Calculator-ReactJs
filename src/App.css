@@ -22,3 +22,9 @@ body {overflow: hidden;}
     height: 60px; 
   }
 }
+#output-view {
+  word-break: break-all;
+  min-height: 50px;
+  padding: 10px;
+  background: cornsilk
+}
