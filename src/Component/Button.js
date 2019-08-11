@@ -8,6 +8,7 @@ export default class Button extends Component {
                     className={"key btn btn-block " + this.props.className}
                     onClick={this.props.onClick}
                     type="button"
+                    data-type={this.props.kind}
                 />
             </div>
         </React.Fragment>
