@@ -112,7 +112,7 @@ export default class App extends Component {
             <span>{this.state.stringValue}</span>
           </div>
           <div id="error">
-            <span className="text-danger">{this.state.error ? ("Please Enter Invalid Button") : ("")}</span>
+            <span className="text-danger">{this.state.error ? ("Please Enter Valid Input") : ("")}</span>
           </div>
           <div className="row">
 
